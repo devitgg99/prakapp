@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAK - Our Mission</title>
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./images/Logo.png">
+
+    <style>
+        .mission {
+            /* Replace the background-color with background-image */
+            background: linear-gradient(rgba(221, 17, 17, 0.9), rgba(221, 17, 17, 0.9)), 
+                        url(./images/backgr.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 60px 30px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding-top: 10px;
+        }
+
+        .mission h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .mission-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .mission-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .mission-points {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .mission-point {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .point-number {
+            background-color: #FFB200;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .point-content h3 {
+            color: #FFB200;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .point-content p {
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            right: -300px;
+            top: 0;
+            width: 300px;
+            height: 100%;
+            background: #2d2d2d;
+            padding-top: 50px;
+            z-index: 999;
+            transition: 0.3s;
+        }
+
+        .sidebar.active {
+            right: 0;
+        }
+
+        .sidebar .menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar .menu li {
+            padding: 15px 25px;
+        }
+
+        .sidebar .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sidebar .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Dropdown in Sidebar */
+        .sidebar .dropdown {
+            display: none;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .sidebar .dropdown li {
+            padding: 10px 0;
+        }
+
+        .sidebar .dropdown-toggle:after {
+            content: '▼';
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission h1 {
+                font-size: 2.5rem;
+            }
+
+            .mission-images {
+                order: 2;
+            }
+
+            .mission-points {
+                order: 1;
+            }
+
+            .mission {
+                padding: 45px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mission-images {
+                grid-template-columns: 1fr;
+            }
+
+            .mission h1 {
+                font-size: 2rem;
+            }
+
+            .mission-point {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navbar -->
+    <header>
+        <a href="./index.html " class="logo">PRAK</a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="index.html#about">About us</a>
+                    <ul>
+                        <li><a href="./Problem.html">Problem</a></li>
+                        <li><a href="./Solution.html">Solution</a></li>
+                        <li><a href="./Framework.html">Framework</a></li>
+                        <li><a href="./longroad.html">Roadmap</a></li>
+                        <li><a href="index.html#services">Features</a></li>
+                        <li><a href="index.html#teams">Our Team</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="index.html#services">Features</a>
+                </li>
+                <li>
+                    <a href="index.html#teams">Our Teams</a>
+                </li>
+                <li>
+                    <a href=""></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <a href="index.html#contact" class="cta">Contact Us</a>
+            <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeSidebar">✖</button>
+        <ul class="menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="#solutions" class="dropdown-toggle">About Us</a>
+                <ul class="dropdown">
+                    <li><a href="./Problem.html">Problem</a></li>
+                    <li><a href="./Solution.html">Solution</a></li>
+                    <li><a href="./Framework.html">Framework</a></li>
+                    <li><a href="./longroad.html">Roadmap</a></li>
+                    <li><a href="index.html#services">Features</a></li>
+                    <li><a href="index.html#teams">Our Team</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#services">Features</a></li>
+            <li><a href="index.html#teams">Our Team</a></li>
+        </ul>
+    </div>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="mission-content">
+            <h1>Problem</h1>
+            <div class="mission-grid">
+                <div class="mission-images">
+                    <img src="path/to/your/image1.jpg" alt="Problem Image 1" class="mission-img">
+                    <img src="path/to/your/image2.jpg" alt="Problem Image 2" class="mission-img">
+                </div>
+                <div class="mission-points">
+                    <div class="mission-point">
+                        <div class="point-number">01</div>
+                        <div class="point-content">
+                            <h3>Multi-Signature Functionality</h3>
+                            <p>Without multi-signature options, users are more likely to lose their money if their account gets hacked. If only one person can control the funds, it makes it easy for a thief to take everything. This lack of security can make users feel unsafe about storing their money in the wallet. Additionally, when multiple people need to manage money together, it can lead to disagreements if there's no shared control.</p>
+                        </div>
+                    </div>
+                    <div class="mission-point">
+                        <div class="point-number">02</div>
+                        <div class="point-content">
+                            <h3>Auto Payment</h3>
+                            <p>Without auto payment features, users have to remember to pay their bills on time. This can lead to missed payments and late fees, which can be frustrating and costly. Keeping track of payment deadlines adds extra stress to managing finances. Also, not having automatic payments makes it harder for users to stay organized and can make using the wallet feel less convenient.</p>
+                        </div>
+                    </div>
+                    <div class="mission-point">
+                        <div class="point-number">03</div>
+                        <div class="point-content">
+                            <h3>Batch Transactions</h3>
+                            <p>Without batch transactions, users end up paying more in fees because each transaction costs money. This can add up quickly, especially for those who make many payments. The process of handling each payment one by one takes more time and effort, which can be tiring. Moreover, doing things manually increases the chance of making mistakes, like sending the wrong amount or choosing the wrong person to pay.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Navigation and button click handler
+        $('nav a, .sidebar a, .nav-actions a').on('click', function(e) {
+            var target = $(this).attr('href');
+            
+            // Handle external links (like Problem.html)
+            if (target && !target.startsWith('#')) {
+                window.location.href = target;
+                return true;
+            }
+            
+            e.preventDefault();
+            
+            // Handle internal links (#about, #services, etc)
+            if (target && target.startsWith('#')) {
+                var $targetSection = $(target);
+                if ($targetSection.length) {
+                    $('html, body').animate({
+                        scrollTop: $targetSection.offset().top - 70
+                    }, 800);
+                }
+            }
+            
+            // Close sidebar if open
+            $('#sidebar').removeClass('active');
+        });
+
+        // Sidebar Toggle
+        $('#sidebarToggle').on('click', function(e) {
+            e.stopPropagation();
+            $('#sidebar').toggleClass('active');
+        });
+
+        $('#closeSidebar').on('click', function() {
+            $('#sidebar').removeClass('active');
+        });
+
+        // Close sidebar when clicking outside
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('#sidebar').length && 
+                !$(e.target).closest('#sidebarToggle').length) {
+                $('#sidebar').removeClass('active');
+            }
+        });
+
+        // Dropdown Toggle in Sidebar
+        $('.dropdown-toggle').on('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).siblings('.dropdown').slideToggle();
+        });
+
+        // Prevent dropdown from closing when clicking inside
+        $('.dropdown').on('click', function(e) {
+            e.stopPropagation();
+        });
+
+        // Handle window scroll for sticky header
+        $(window).scroll(function() {
+            if(this.scrollY > 20) {
+                $('header').addClass('sticky');
+            } else {
+                $('header').removeClass('sticky');
+            }
+        });
+    });
+</script>
+</body>
+</html>
